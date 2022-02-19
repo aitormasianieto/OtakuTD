@@ -5,10 +5,14 @@ using System.Collections;
 
 public class WaifuInteractions : MonoBehaviour
 {
+
+    public GameObject bocadillo;
+    private bool seve = true;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        bocadillo.SetActive(false);
     }
 
     // Update is called once per frame
@@ -16,9 +20,9 @@ public class WaifuInteractions : MonoBehaviour
     {
         
     }
-    private void OnMouseDown()
+    void OnMouseDown()
     {
-        AssetBundle.GetAllLoadedAssetBundles("");
-        gameObject.GetComponent<Renderer>().enabled = false;
+        bocadillo.SetActive(seve);
+        seve = !seve;
     }
 }
